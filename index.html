@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordly - Simple Dictionary</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Wordly</h1>
+    <p>Look up any English word: meaning, pronunciation, and more.</p>
+    <button id="theme-toggle-btn" type="button" aria-label="Switch between light and dark theme">Night Mode</button>
+  </header>
+
+  <main>
+
+    <!-- search form -->
+    <section class="search-section">
+      <form id="search-form">
+        <label for="word-input">Search a word</label>
+        <input
+          type="text"
+          id="word-input"
+          name="word"
+          placeholder="Type here!!"
+          autocomplete="off"
+        >
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+    </section>
+
+    <!-- loading and error messages -->
+    <section class="message-section">
+      <p id="loading-message" class="hidden" role="status">Loading…</p>
+      <p id="error-message" class="hidden error-text" role="alert"></p>
+    </section>
+
+    <!-- results -->
+    <section class="results-section">
+      <div id="results-container"></div>
+    </section>
+
+    <!-- favorites -->
+    <section class="favorites-section">
+      <h2>Favorites</h2>
+      <div id="favorites-container">
+        <p id="no-favorites-message">No favorite words saved yet.</p>
+        <ul id="favorites-list"></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Data from the Free Dictionary API.</p>
+  </footer>
+
+  <!-- "defer" makes sure the HTML loads first, then the script runs -->
+  <script src="js/index.js" defer></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,99 @@
+# Wordly Dictionary SPA
+
+Wordly is a Single Page Application (SPA) that lets you search for any English
+word and see its pronunciation, meanings, definitions, examples, and synonyms
+- all without the page ever reloading. It's built with plain HTML, CSS, and
+JavaScript, and gets its word data from a free public dictionary API.
+
+## Features
+
+- Word search
+- Definitions and parts of speech
+- Pronunciation text
+- Audio pronunciation (when available)
+- Example sentences (when available)
+- Synonyms (when available)
+- Favorites, saved using `localStorage` so they persist after closing the page
+- Error handling for empty input, misspelled/unknown words, and network failures
+- Responsive design (works on desktop and mobile)
+- Light/dark theme toggle
+
+## Technologies used
+
+- HTML
+- CSS
+- JavaScript
+- [Free Dictionary API](https://dictionaryapi.dev/)
+- `localStorage`
+
+## Project structure
+
+```
+wordly/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── index.js
+└── README.md
+```
+
+## How to run the project
+
+1. Clone or download this repository.
+2. Open the project folder.
+3. Open `index.html` in your browser (or use the "Live Server" extension in
+   VS Code).
+4. Enter a word in the search field.
+
+## API information
+
+Word data comes from the **Free Dictionary API**, which requires no API key.
+
+Endpoint format:
+```
+https://api.dictionaryapi.dev/api/v2/entries/en/{word}
+```
+
+The app sends the word you searched for to this endpoint and displays the
+meanings, pronunciation, audio (when available), examples, synonyms, and
+source links returned in the response.
+
+## Usage
+
+1. Enter a word.
+2. Click **Search**.
+3. View the definition and pronunciation details.
+4. Play the audio pronunciation, if available.
+5. Save or remove the word from your favorites.
+
+## Screenshots
+
+![Wordly screenshot](./assets/screenshot.png)
+
+*(Add a screenshot of the running app to the `assets` folder and update the
+path above if you name the file something different.)*
+
+## Live Demo
+
+*(Add your deployed application link here once it's live.)*
+
+## GitHub Repository
+
+*(Add your GitHub repository URL here.)*
+
+## Known limitations
+
+- Some words lack audio, example sentences, or synonyms in the underlying API
+  data - the app simply omits those sections for that word rather than
+  showing them empty.
+- This version only supports English words.
+
+## Author
+
+*(Your name here)* — *(optional: your GitHub profile link)*
+
+## License
+
+This project is provided for educational use. Feel free to use, modify, and
+learn from this code.
