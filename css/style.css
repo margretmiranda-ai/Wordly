@@ -91,4 +91,42 @@ body.dark-mode #favorites-list li {
   display: none;
 }
 
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 
+}
+
+body.dark-mode #theme-toggle-btn {
+  background-color: #001433;
+  color: #cfe0ff;
+}
+
+body.dark-mode #favorites-list li {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .word-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+h1, body > p {
+  text-align: center;
+}
+
+#favorites-list li {
+  max-width: 400px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+}

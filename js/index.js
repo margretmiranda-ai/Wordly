@@ -6,6 +6,8 @@ const errorMessage = document.getElementById("error-message");
 const resultsContainer = document.getElementById("results-container");
 const favoritesList = document.getElementById("favorites-list");
 const noFavoritesMessage = document.getElementById("no-favorites-message");
+const themeToggleBtn = document.getElementById("theme-toggle-btn");
+const body = document.body;
 
 const FAVORITES_KEY = "wordly-favorites";
 const API_BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
@@ -24,10 +26,13 @@ function handleSearch(event) {
     return;
   }
   fetchWord(word);
+    searchBtn.disabled = true;
+    loadingMessage.textContent = "loading";
+    loadingMessage.classList.remove("hidden");
+
 }
 async function fetchWord(word) {
   setLoading(true);
-  searchBtn.disabled = true;
   try {
     const url = `${API_BASE_URL}${encodeURIComponent(word)}`;
     const response = await fetch(url);
@@ -279,3 +284,13 @@ function setLoading(isLoading) {
   loadingMessage.style.display = isLoading ? "block" : "none";
   searchBtn.disabled = isLoading;
 }
+ themeToggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    themeToggleBtn.textContent = "Light Mode";
+  
+  } else {
+    themeToggleBtn.textContent = "Night Mode"
+  }
+ });
